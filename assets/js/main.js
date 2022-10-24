@@ -61,7 +61,7 @@ function TiraDado(){
         vittoriacomputer = vittoriacomputer + 1;
     }
 
-    player.innerHTML = `Vittorie: ${vittoriaplayer}`;
-    computer.innerHTML = `Perdite: ${vittoriacomputer}`;
+    player.innerHTML = `Vittoria Player: ${vittoriaplayer}`;
+    computer.innerHTML = `Vittoria Computet: ${vittoriacomputer}`;
 
 }
