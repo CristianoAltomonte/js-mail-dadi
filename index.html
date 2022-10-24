@@ -11,15 +11,26 @@
 <body>
     
     <h1 class="text-center mt-3">Inserisci qui la tua email</h1>
+    
+    <section class="container">
+        <form action="">
+            <label for="email">email</label>
+            <input type="email" id="inputEmail" placeholder="inserisci qui la tua email">
+            <button onclick="iscriviti(); return false">Invia!</button>
+        </form>
+        <h2 id="utente"></h2>
+    </section>
+    
+    <section class="container mt-5">
+        <button onclick="TiraDado(); return false">Tira i Dadi</button>
 
-    <form action="">
-        <label for="email">email</label>
-        <input type="email" id="inputEmail">
-        <button onclick="iscriviti(); return false">Invia!</button>
-    </form>
-    <h2 id="utente"></h2>
+        <h4 id="player"></h4>
+        <h4 id="computer"></h4>
+        <h3 id="risultato"></h3>
 
 
+
+    </section>
 
 
 
