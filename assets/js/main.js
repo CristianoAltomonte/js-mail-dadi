@@ -6,17 +6,22 @@
 // stampa un messaggio appropriato sull’esito del controllo.
 
 
-const inputEmail = document.getElementById('inputEmail'); 
+let inputEmail = document.getElementById('inputEmail'); 
+
+let emails = ['provax@hotmail.it','provay@hotmail.it','provaz@hotmail.it'];
+
+// variabile soldatino 
+let emaildone = false;
 
 function iscriviti(){
 
     let valueEmail = inputEmail.value;
-    let emails = ['provax@hotmail.it','provay@hotmail.it','provaz@hotmail.it'];
-
-    let emaildone = false;
 
     for(let i = 0; i < emails.length; i++){
-        if (emails[i] == valueEmail){
+
+        let thisEmail = emails[i];
+
+        if (valueEmail == thisEmail){
             emaildone = true;
         }
     }
@@ -41,13 +46,14 @@ let vittoriacomputer = 0;
 
 let player = document.getElementById("player");
 let computer = document.getElementById("computer");
+let pareggio = document.getElementById("pareggio");
 
 
 function TiraDado(){
     
     let risultato = document.getElementById('risultato');
-    let randomplayer = Math.floor(Math.random() * 6 + 1);
-    let randomcomputer = Math.floor(Math.random() * 6 + 1);
+    let randomplayer = Math.round(Math.random() * 6 + 1);
+    let randomcomputer = Math.round(Math.random() * 6 + 1);
     
     if (randomplayer > randomcomputer) {
         risultato.innerHTML = `Hai vinto! il tuo numero è ${randomplayer}`;
@@ -63,5 +69,4 @@ function TiraDado(){
 
     player.innerHTML = `Vittoria Player: ${vittoriaplayer}`;
     computer.innerHTML = `Vittoria Computet: ${vittoriacomputer}`;
-
 }
